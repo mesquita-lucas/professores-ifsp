@@ -6,13 +6,6 @@ import Botao from "../Botao/Botao";
 
 const Formulario = (props) => {
 
-    const areas = [
-        'Progr. Básica',
-        'Progr. Web',
-        'Banco de Dados',
-        'Diversos'
-    ]
-
     const [name, setName] = useState('');
     const [title, setTitle] = useState('');
     const [image, setImage] = useState('');
@@ -49,7 +42,7 @@ const Formulario = (props) => {
                 />
                 <ListaSuspensa 
                     label="Áreas"  
-                    itens={areas}
+                    items={props.areas}
                     onChange={value => setArea(value)}    
                 />
                 <Botao text="Criar professor"/>
